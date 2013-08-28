@@ -1,4 +1,4 @@
-package edu.indiana.cs.b534;
+package RayTracer_CS;
 
 import java.io.FileInputStream;
 import javax.xml.parsers.DocumentBuilder;
@@ -7,7 +7,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import edu.indiana.cs.b534.RayTracerStub;
+import RayTracer_CS.RayTracerStub;
 
 public class Parser{
 	 static String scene_name,method_string;
