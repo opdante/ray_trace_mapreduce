@@ -5,22 +5,18 @@
  * by the Apache Axis2 version: 1.5.1  Built on : Oct 19, 2009 (10:59:34 EDT)
  */
             
-                package ray_tracer;
+package ray_tracer;
             
-
-            /**
-            *  CameraSetup bean class
-            */
-        
-        public  class CameraSetup
-        implements org.apache.axis2.databinding.ADBBean{
-        /* This type was generated from the piece of schema that had
-                name = CameraSetup
-                Namespace URI = http://b534.cs.indiana.edu
-                Namespace Prefix = ns1
-                */
-            
-
+/**
+*  CameraSetup bean class
+*/
+       
+public  class CameraSetup implements org.apache.axis2.databinding.ADBBean{
+       /* This type was generated from the piece of schema that had
+          name = CameraSetup
+          Namespace URI = http://b534.cs.indiana.edu 
+          Namespace Prefix = ns1
+        */
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://b534.cs.indiana.edu")){
                 return "ns1";
@@ -28,51 +24,41 @@
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
 
-        
-
-                        /**
-                        * field for Direction
-                        */
-
-                        
-                                    protected ray_tracer.Point3D localDirection ;
+        /**
+          field for Direction
+        */
+        protected ray_tracer.Point3D localDirection ;
                                 
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localDirectionTracker = false ;
+        /*  This tracker boolean wil be used to detect whether the user called the set method
+         *   for this attribute. It will be used to determine whether to include this field
+         *   in the serialized XML
+         */
+        protected boolean localDirectionTracker = false ;
                            
+        /**
+         * Auto generated getter method
+         * @return ray_tracer.Point3D
+         */
+        public  ray_tracer.Point3D getDirection(){
+            return localDirection;
+        }
 
-                           /**
-                           * Auto generated getter method
-                           * @return ray_tracer.Point3D
-                           */
-                           public  ray_tracer.Point3D getDirection(){
-                               return localDirection;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Direction
-                               */
-                               public void setDirection(ray_tracer.Point3D param){
-                            
-                                       if (param != null){
-                                          //update the setting tracker
-                                          localDirectionTracker = true;
-                                       } else {
-                                          localDirectionTracker = true;
-                                              
-                                       }
+        /**
+         * Auto generated setter method
+         * @param param Direction
+         */
+        public void setDirection(ray_tracer.Point3D param){
+                          
+           if (param != null){
+               //update the setting tracker
+               localDirectionTracker = true; 
+           } else {
+               localDirectionTracker = true;
+           }
                                    
-                                            this.localDirection=param;
-                                    
-
-                               }
-                            
+              this.localDirection=param;
+           }
+                       
 
                         /**
                         * field for Location
