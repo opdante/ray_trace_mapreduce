@@ -1,8 +1,6 @@
-
 /**
  * RayTracerSkeleton.java
  *
- * This file was auto-generated from WSDL
  * by the Apache Axis2 version: 1.5.1  Built on : Oct 19, 2009 (10:59:00 EDT)
  */
 package ray_tracer;
@@ -154,10 +152,15 @@ public class RayTracerSkeleton{
 		ray_tracer.CameraSetup[] camerastp= rayTraceMovie.getCamera();
 		String url[] = new String[camerastp.length]; 
 
-		for (int i=0;i<camerastp.length;i++) {
-			Vector location= new Vector(camerastp[i].getLocation().getX(),camerastp[i].getLocation().getY(),camerastp[i].getLocation().getZ());
-			Vector direction= new Vector(camerastp[i].getDirection().getX(),camerastp[i].getDirection().getY(),camerastp[i].getDirection().getZ());
-			edu.indiana.extreme.CameraSetup camera = new edu.indiana.extreme.CameraSetup(direction, location);
+		for ( int i=0; i < camerastp.length; i++ ) {
+			Vector location = 
+				new Vector( camerastp[i].getLocation().getX(),
+					    camerastp[i].getLocation().getY(),camerastp[i].getLocation().getZ());
+			Vector direction = 
+				new Vector( camerastp[i].getDirection().getX(),
+					    camerastp[i].getDirection().getY(),camerastp[i].getDirection().getZ());
+			edu.indiana.extreme.CameraSetup camera = 
+				new edu.indiana.extreme.CameraSetup(direction, location);
 
 			URL xmlurl=null;
 			try{
@@ -165,6 +168,7 @@ public class RayTracerSkeleton{
 			}catch(Exception e){
 				e.printStackTrace();
 			}
+			
 			SceneVectorGraphics sceneHolder = new SceneVectorGraphics(xmlurl);
 
 			RGB[][] rgb = tracer.rayTrace(camera, sceneHolder, imageWidth, imageHeight);
@@ -196,11 +200,15 @@ public class RayTracerSkeleton{
 		int imageWidth =  rayTraceURL.getImageWidth();
 
 		ray_tracer.CameraSetup camerastp= rayTraceURL.getCamera();
-		Vector location= new Vector(camerastp.getLocation().getX(),camerastp.getLocation().getY(),camerastp.getLocation().getZ());
-		Vector direction= new Vector(camerastp.getDirection().getX(),camerastp.getDirection().getY(),camerastp.getDirection().getZ());
+		Vector location = 
+			new Vector( camerastp.getLocation().getX(),
+				    camerastp.getLocation().getY(),camerastp.getLocation().getZ());
+		Vector direction= 
+			new Vector( camerastp.getDirection().getX(),
+				    camerastp.getDirection().getY(),camerastp.getDirection().getZ());
 		edu.indiana.extreme.CameraSetup camera = new edu.indiana.extreme.CameraSetup(direction, location);
 
-		URL xmlurl=null;
+		URL xmlurl = null;
 		try{
 			xmlurl=new URL(rayTraceURL.getSceneURL());
 		}catch(Exception e){
